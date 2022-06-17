@@ -1,70 +1,55 @@
-# Getting Started with Create React App
+# Redux Punch
+## What is Redux Punch?
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+* Redux punch is a project recipe bootstrapped with [Create React App](https://github.com/facebook/create-react-app) and then all the goodies of redux, react-redux, react-router-dom, redux-persist, redux-thunk and reselect are added. 
+* Clean ux interface integration with [material ui](https://mui.com/) is done.
 
-## Available Scripts
+## Why Redux Punch?
 
-In the project directory, you can run:
+* Inspired by Convention Over Configuration Approach (COCA), Redux Punch provides some default convention using which ui application development becomes a breeze.
+* Users of Redux Punch do not need to know all the inner details how the frameworks work but can follow a simple convention to make everything work.
 
-### `npm start`
+## Setting up the Project
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+* Pull the source code and cd to redux-punch dir.
+```
+git clone https://github.com/vensr/redux-punch.git
+```
+* Install all dependencies
+```
+yarn install
+```
+* Start the app
+```
+yarn start
+```
+* Access the app at http://localhost:3000
+* You can then modify the code to suit your needs or take inspiration from the code to do whatever you wish to
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Try using Docker
 
-### `npm test`
+Try running the app without setting up any code
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+* Pull docker image
+```
+docker pull venkatesh5/redux-punch
+```
+* Run the image
+```
+docker run -it -p 3000:3000 venkatesh5/redux-punch
+```
 
-### `npm run build`
+## Running in Production
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+The project contains a docker file that can be used to build the docker image to run in production. 
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+* Build the image using
+```
+docker build -t redux-punch .
+```
+* Run the built image using 
+```
+docker run -it -p 3000:3000 redux-punch
+```
+* Access the app at the http://localhost:3000
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
