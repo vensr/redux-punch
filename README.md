@@ -142,7 +142,7 @@ const mapDispatchToProps = dispatch => ({
     }
 });
 
-export default connect(mapStateToProps, mapDispatchToProps)(AlertMessage);
+export default connect(mapStateToProps, mapDispatchToProps)(MyNewComponent);
 
 ```
 
