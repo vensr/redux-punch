@@ -123,7 +123,7 @@ export const getDataFromState = state => {
 ```js
 import React from "react";
 import { connect } from "react-redux";
-import { getMessage } from "../../selectors/mynewselector";
+import { getDataFromState } from "../../selectors/mynewselector";
 import { fetchData } from "../../thunks/mynewthunk";
 
 const MyNewComponent = ({ myNewData }) => {
