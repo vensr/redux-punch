@@ -191,3 +191,5 @@ docker build -t redux-punch .
 docker run -it -p 3000:3000 redux-punch
 ```
 * Access the app at the http://localhost:3000
+
+* To deploy the application on Kubernetes and ArgoCD check [redux-punch-deploy](https://github.com/vensr/redux-punch-deploy)
