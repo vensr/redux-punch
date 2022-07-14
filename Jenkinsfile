@@ -3,6 +3,8 @@ pipeline {
     registry = "venkatesh5/redux-punch-jenkins"
     registryCredential = 'dockerhub'
     dockerImage = ''
+    def dockerHome = tool "docker"
+    env.PATH = "${dockerHome}/bin:${env.PATH}"
   }
   agent any
   tools {nodejs "node" }
