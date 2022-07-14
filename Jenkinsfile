@@ -17,14 +17,18 @@ pipeline {
          sh 'npm install'
        }
     }
-    stage('Building image') {
+    stage('Initialize Docker'){
+        def dockerHome = tool 'docker'
+        env.PATH = "${dockerHome}/bin:${env.PATH}"
+    }
+    stage('Building Redux Punch Image') {
       steps{
         script {
           dockerImage = docker.build registry + ":$BUILD_NUMBER"
         }
       }
     }
-    stage('Deploy Image') {
+    stage('Push Redux Punch Image to Registry') {
       steps{
          script {
             docker.withRegistry( '', registryCredential ) {
@@ -33,7 +37,7 @@ pipeline {
         }
       }
     }
-    stage('Remove Unused docker image') {
+    stage('Cleanup Docker Images') {
       steps{
         sh "docker rmi $registry:$BUILD_NUMBER"
       }
