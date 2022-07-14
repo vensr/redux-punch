@@ -17,10 +17,6 @@ pipeline {
          sh 'npm install'
        }
     }
-    stage('Initialize Docker'){
-        def dockerHome = tool 'docker'
-        env.PATH = "${dockerHome}/bin:${env.PATH}"
-    }
     stage('Building Redux Punch Image') {
       steps{
         script {
